@@ -1,0 +1,51 @@
+{
+  "name": "leylim",
+  "version": "1.0.0",
+  "description": "Leylim",
+  "main": "dist/leylim.js",
+  "module": "dist/leylim.mjs",
+  "jsnext:main": "dist/leylim.mjs",
+  "scripts": {
+    "prebuild": "eslint lib test",
+    "build": "rollup -c --environment BUILD:production",
+    "watch": "rollup -c -w",
+    "pretest": "rollup -c",
+    "test": "mocha",
+    "prepublish": "npm test"
+  },
+  "repository": "rollup/leylim",
+  "keywords": [
+    "leylim"
+  ],
+  "author": "Abdullah MARA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abdullah/leylim/issues"
+  },
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "homepage": "https://github.com/abdullah/leylim#readme",
+  "dependencies": {
+    "eventemitter2": "^4.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "babelrc-rollup": "^3.0.0",
+    "eslint": "^4.1.1",
+    "istanbul": "^0.4.5",
+    "livereload": "^0.6.2",
+    "mocha": "^3.2.0",
+    "rollup": "^0.43.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-istanbul": "^1.1.0",
+    "rollup-plugin-livereload": "^0.4.0",
+    "rollup-plugin-serve": "^0.4.0",
+    "rollup-plugin-string": "^2.0.2",
+    "rollup-watch": "^4.0.0"
+  }
+}
