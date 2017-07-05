@@ -16,7 +16,7 @@ let plugins = [
     port: 1992
   }),
   livereload({
-    watch: ['dist', 'example']
+    watch: ['dist', 'docs']
   })
 ];
 
