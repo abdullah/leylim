@@ -1,0 +1,39 @@
+.Leylim {
+  padding-right: 300px;
+}
+
+.Leylim-component-list {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  border: 1px solid #ccc;
+  z-index: 2;
+  background: white;
+
+}
+.Leylim-component-list__item {
+  display: block;
+  height: 100px;
+  border: 1px solid red;
+  line-height: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.Leylim-area {
+
+}
+.Leylim-area__row {
+
+}
+.Leylim-area__row .template {
+
+}
+.Leylim-area__row .actions {
+
+}
+.Leylim-area__row .actions a {
+
+}
