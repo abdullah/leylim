@@ -18,8 +18,24 @@ const rowList = [
   }
 ]
 
-const leylim = new Leylim({
+let leylim;
+
+const showResult = () => {
+  const res = leylim.getResult()
+  console.log(res);
+}
+
+leylim = new Leylim({
   el: '#app',
   components,
-  rowList
+  rowList,
+  buttons: [
+    {
+      text: "show1",
+      class: "class1",
+      handler: showResult
+    }
+  ]
 });
+
+
