@@ -48,6 +48,7 @@
     "rollup-plugin-livereload": "^0.4.0",
     "rollup-plugin-serve": "^0.4.0",
     "rollup-plugin-string": "^2.0.2",
+    "rollup-plugin-uglify": "^2.0.1",
     "rollup-watch": "^4.0.0"
   }
 }

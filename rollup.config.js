@@ -3,30 +3,36 @@ import babelrc from 'babelrc-rollup';
 import istanbul from 'rollup-plugin-istanbul';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
+import uglify from 'rollup-plugin-uglify';
 
 let pkg = require('./package.json');
 let external = Object.keys(pkg.dependencies);
 
 let plugins = [
   babel(babelrc()),
-  serve({
-    open: true,
-    host: 'localhost',
-    contentBase: ['./'],
-    port: 1992
-  }),
-  livereload({
-    watch: ['dist', 'docs']
-  })
 ];
 
 if (process.env.BUILD !== 'production') {
   plugins.push(
+    serve({
+      open: true,
+      host: 'localhost',
+      contentBase: ['./'],
+      port: 1992
+    }),
+    livereload({
+      watch: ['dist', 'docs']
+    }),
     istanbul({
       exclude: ['test/**/*', 'node_modules/**/*']
     })
   );
+} else {
+  plugins.push(
+    uglify()
+  )
 }
+
 
 export default {
   entry: 'lib/index.js',
