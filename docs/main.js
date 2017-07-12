@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-const components = [
+let components = [
   {
     name: 'blabla', // tmp name
     template: '<div contenteditable>Lorem ipsum dolor sit <b>amet</b>, consectetur adipisicing elit. At reiciendis et aliquid dolores eligendi repellendus, voluptate ut odio omnis, consectetur aliquam deserunt reprehenderit eum exercitationem neque nemo veritatis eveniet molestiae!</div>'
@@ -27,6 +27,21 @@ const onSave = () => {
   }
 }
 
+const onUpdate = () => {
+  components = [
+    ...components,
+    {
+      name: `dynamic ${Math.random()}`, // tmp name
+      template: `<div contenteditable>Dynamic components ${Math.random()}</div>`
+    }
+  ];
+
+  leylim.update({
+    components
+  })
+
+}
+
 leylim = new Leylim({
   el: '#app',
   components,
@@ -36,8 +51,12 @@ leylim = new Leylim({
       text: "Save",
       class: "save-class-example",
       handler: onSave
+    },
+    {
+      text: "Update",
+      class: "update-class-example",
+      handler: onUpdate
     }
   ]
 });
-
 
