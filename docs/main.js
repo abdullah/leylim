@@ -20,9 +20,11 @@ const rowList = [
 
 let leylim;
 
-const showResult = () => {
-  const res = leylim.getResult()
-  console.log(res);
+const onSave = () => {
+  const res = leylim.getRowData()
+  for (var ii = 0; ii < res.length; ii++) {
+    console.log(res[ii].template);
+  }
 }
 
 leylim = new Leylim({
@@ -31,9 +33,9 @@ leylim = new Leylim({
   rowList,
   buttons: [
     {
-      text: "show1",
-      class: "class1",
-      handler: showResult
+      text: "Save",
+      class: "save-class-example",
+      handler: onSave
     }
   ]
 });
