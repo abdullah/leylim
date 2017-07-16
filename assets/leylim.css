@@ -1,6 +1,3 @@
-* {
-  outline: 1px solid red;
-}
 :root {
   --container-width: 1200px;
   --border-color: #ddd;
@@ -42,6 +39,12 @@
   width: 100%;
   margin-top: 30px;
   max-width: var(--container-width);
+}
+
+.leylim__empty-area{
+  text-align: center;
+  font-size: 100px;
+  color: var(--border-color)
 }
 
 .leylim-area-row {

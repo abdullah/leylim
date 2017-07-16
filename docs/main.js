@@ -54,7 +54,7 @@ window.onload = () => {
 
   leylim = new Leylim({
     el: '#app',
-    components,
+    // components,
     rowList,
     buttons: [
       {
