@@ -1,23 +1,72 @@
+:root {
+  --container-width: 1200px;
+  --border-color: #ddd;
+}
+
 .leylim {
-  position: relative;
   width: 100vw;
   height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .leylim__component-list {
+  width: 200px;
+  height: 100%;
+  background: white;
+  border-left: 1px solid var(--border-color);
   position: absolute;
+  right: 0;
+  top: 0;
 }
-.leylim__list-item {}
 
-.leylim__area {}
+.leylim__list-item {
+  width: 100%;
+  height: 200px;
+  display: block;
+  border-bottom: 1px solid var(--border-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.leylim__area {
+  width: 100%;
+  max-width: var(--container-width);
+  outline: 1px solid red;
+}
+
 .leylim-area-row {}
+
 .leylim-area-row__template {}
+
 .leylim-area-row__actions {}
 
 .leylim-actions-button {}
-.leylim-actions-button--delete{}
-.leylim-actions-button--duplicate{}
-.leylim-actions-button--edit{}
 
-.leylim__footer{}
-.leylim__footer-button{}
+.leylim-actions-button--delete {}
+
+.leylim-actions-button--duplicate {}
+
+.leylim-actions-button--edit {}
+
+.leylim__footer {
+  width: var(--container-width);
+  margin-top: 20px;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+.leylim__footer-button {
+  padding: 10px 30px;
+  margin-left: 10px;
+  border: 1px solid var(--border-color);
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
