@@ -11,7 +11,7 @@ let external = Object.keys(pkg.dependencies);
 
 let plugins = [
   sass({
-    output: './docs/leylim.css',
+    output: './dist/leylim.css',
   }),
   babel(babelrc()),
 ];
