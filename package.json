@@ -2,9 +2,9 @@
   "name": "leylim",
   "version": "1.0.0",
   "description": "Leylim",
-  "main": "dist/leylim.js",
-  "module": "dist/leylim.mjs",
-  "jsnext:main": "dist/leylim.mjs",
+  "main": "docs/leylim.js",
+  "module": "docs/leylim.mjs",
+  "jsnext:main": "docs/leylim.mjs",
   "scripts": {
     "prebuild": "eslint lib test",
     "build": "rollup -c --environment BUILD:production",
@@ -23,8 +23,7 @@
     "url": "https://github.com/abdullah/leylim/issues"
   },
   "files": [
-    "lib",
-    "dist"
+    "docs"
   ],
   "homepage": "https://github.com/abdullah/leylim#readme",
   "dependencies": {
