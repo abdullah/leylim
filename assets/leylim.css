@@ -1,0 +1,23 @@
+.leylim {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.leylim__component-list {
+  position: absolute;
+}
+.leylim__list-item {}
+
+.leylim__area {}
+.leylim-area-row {}
+.leylim-area-row__template {}
+.leylim-area-row__actions {}
+
+.leylim-actions-button {}
+.leylim-actions-button--delete{}
+.leylim-actions-button--duplicate{}
+.leylim-actions-button--edit{}
+
+.leylim__footer{}
+.leylim__footer-button{}
