@@ -37,22 +37,43 @@
 .leylim__area {
   width: 100%;
   max-width: var(--container-width);
-  outline: 1px solid red;
 }
 
-.leylim-area-row {}
+.leylim-area-row {
+  position: relative;
+  margin-bottom: 20px;
+  /* outline: 1px solid red; */
+}
 
+.leylim-area-row:hover .leylim-actions{
+  display: block;
+}
 .leylim-area-row__template {}
 
-.leylim-area-row__actions {}
+.leylim-area-row__actions {
+  width: 30px;
+  position: absolute;
+  left: -50px;
+  top: 0;
+  padding-right: 20px;
+  z-index: 2;
+}
 
-.leylim-actions-button {}
+.leylim-actions {
+  background: rgba(0, 0, 0, 0.4);
+  width: 30px;
+  height: 30px;
+  display: block;
+  color: floralwhite;
+  border: 1px  solid #fff;
+  display: none;
+}
 
-.leylim-actions-button--delete {}
+.actions--delete {}
 
-.leylim-actions-button--duplicate {}
+.actions--duplicate {}
 
-.leylim-actions-button--edit {}
+.actions--edit {}
 
 .leylim__footer {
   width: var(--container-width);
