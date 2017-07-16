@@ -1,3 +1,6 @@
+* {
+  outline: 1px solid red;
+}
 :root {
   --container-width: 1200px;
   --border-color: #ddd;
@@ -20,6 +23,7 @@
   position: absolute;
   right: 0;
   top: 0;
+  overflow: scroll;
 }
 
 .leylim__list-item {
@@ -36,6 +40,7 @@
 
 .leylim__area {
   width: 100%;
+  margin-top: 30px;
   max-width: var(--container-width);
 }
 
@@ -48,8 +53,14 @@
 .leylim-area-row:hover .leylim-actions{
   display: block;
 }
+
 .leylim-area-row__template {}
 
+.leylim-html-mode{
+  font-family: Courier New, Courier, monospace;
+  background: #f2f2f2;
+  padding: 5px;
+}
 .leylim-area-row__actions {
   width: 30px;
   position: absolute;
@@ -66,9 +77,15 @@
   display: block;
   color: floralwhite;
   border: 1px  solid #fff;
-  display: none;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+   display: none;
 }
 
+.action-active{
+  background: black;
+}
 .actions--delete {}
 
 .actions--duplicate {}
