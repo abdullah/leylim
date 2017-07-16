@@ -4,11 +4,15 @@ import istanbul from 'rollup-plugin-istanbul';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
 import uglify from 'rollup-plugin-uglify';
+import sass from 'rollup-plugin-sass';
 
 let pkg = require('./package.json');
 let external = Object.keys(pkg.dependencies);
 
 let plugins = [
+  sass({
+    output: './dist/leylim.css',
+  }),
   babel(babelrc()),
 ];
 
