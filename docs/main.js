@@ -6,11 +6,11 @@ window.onload = () => {
   let components = [
     {
       name: 'blabla', // tmp name
-      template: '<div class="blabla" contenteditable>Lorem ipsum dolor sit <b>amet</b>, consectetur adipisicing elit. At reiciendis et aliquid dolores eligendi repellendus, voluptate ut odio omnis, <img src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg" /> aliquam deserunt reprehenderit eum exercitationem neque nemo veritatis eveniet molestiae!</div>',
+      template: `<div class="blabla" contenteditable>Lorem ipsum dolor sit <b>amet</b>, consectetur adipisicing elit. At reiciendis et aliquid dolores eligendi repellendus, voluptate ut odio omnis,
+      <img src="http://tetrailetisim.com/resim/olcekle/37775/600/574" /> aliquam deserunt reprehenderit eum exercitationem neque nemo veritatis eveniet molestiae!</div>`,
       style: `
         .blabla img {
           display: block;
-          width: 100px;
         }
       `
     },
@@ -23,9 +23,11 @@ window.onload = () => {
 
   const rowList = [
     {
-      name: 'hacucuao', // tmp name
-      template: `<div class="hacucuao" contenteditable>Aune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır.Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren </div>`,
-      style: `.hacucuao { color: black }`
+      name: 'wiki-info', // tmp name
+      template: `<div class="wiki-info" contenteditable><h1>Leylim Ley </h1> Bestesi Zülfü Livaneli’ye aittir. Türkünün üç dörtlükten oluşan sözleri, Sabahattin Ali’nin Ses (1937) adlı öykü kitabına adını veren “Ses” öyküsünde yer alır. Öykünün kahramanı yol amelesi Sivaslı Ali, çadırının önünde durup saz çalıp, bu türküyü söyler. Zülfü Livaneli, öyküyü okurken bu türkünün sözlerinden çok etkilendiğini ve bestelediğini açıklamıştır.
+      <p>Eseri seslendirilen sanatçılar arasında İbrahim Tatlıses, Edip Akbayram, Zerrin Özer, Leman Sam, Zara, Özdemir Erdoğan yer alır.</p>
+      </div>`,
+      style: `.wiki-info { color: black }`
     }
   ]
 
@@ -54,7 +56,7 @@ window.onload = () => {
 
   leylim = new Leylim({
     el: '#app',
-    // components,
+    components,
     rowList,
     buttons: [
       {
