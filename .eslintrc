@@ -3,7 +3,6 @@
   "extends": "eslint:recommended",
   "env": {
     "browser": true,
-    "node": true,
-    "mocha": true
+    "node": true
   }
 }
