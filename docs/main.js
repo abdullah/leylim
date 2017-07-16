@@ -3,7 +3,7 @@
 let components = [
   {
     name: 'blabla', // tmp name
-    template: '<div contenteditable>Lorem ipsum dolor sit <b>amet</b>, consectetur adipisicing elit. At reiciendis et aliquid dolores eligendi repellendus, voluptate ut odio omnis, consectetur aliquam deserunt reprehenderit eum exercitationem neque nemo veritatis eveniet molestiae!</div>'
+    template: '<div contenteditable>Lorem ipsum dolor sit <b>amet</b>, consectetur adipisicing elit. At reiciendis et aliquid dolores eligendi repellendus, voluptate ut odio omnis, <img src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg" /> aliquam deserunt reprehenderit eum exercitationem neque nemo veritatis eveniet molestiae!</div>'
   },
   {
     name: 'fooooo', // tmp name
@@ -23,7 +23,7 @@ let leylim;
 const onSave = () => {
   const res = leylim.getRowData()
   for (var ii = 0; ii < res.length; ii++) {
-    console.log(res[ii].template);
+    console.log(res[ii]);
   }
 }
 
