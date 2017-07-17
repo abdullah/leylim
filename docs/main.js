@@ -58,6 +58,15 @@ window.onload = () => {
     el: '#app',
     components,
     rowList,
+    customEditorButtons: [
+      {
+        command: 'test',
+        icon: 'fa fa-cog',
+        handler(selection) {
+          console.log(selection);
+        }
+      }
+    ],
     buttons: [
       {
         text: "Save",
