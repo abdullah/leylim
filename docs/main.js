@@ -43,7 +43,7 @@ window.onload = () => {
       oneImage,
       twoImage
     ],
-    // rowList,
+    rowList,
     customEditorButtons: [
       {
         command: 'test',
@@ -65,13 +65,30 @@ window.onload = () => {
         handler: onUpdate
       }
     ],
-    onCreate: {
-      before(options){
-        console.log(options);
-      },
-      after(options){
-        console.log(options);
-      }
+    beforeCreate() {
+      console.log("beforeCreate")
+    },
+    created() {
+      console.log("created")
+    },
+    beforeRowUpdate() {
+      console.log("beforeRowUpdate")
+    },
+    rowUpdated() {
+      console.log("rowUpdated")
+    },
+    beforeRowDelete() {
+      console.log("beforeRowDelete")
+    },
+    rowDeleted() {
+      console.log("rowDeleted")
+    },
+    beforeRowDuplicate(row, cb){
+      cb(row);
+      console.log("beforeRowDuplicate");
+    },
+    rowDuplicated(){
+      console.log("rowDuplicated");
     },
   });
 }
