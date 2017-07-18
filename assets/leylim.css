@@ -41,6 +41,7 @@
   text-transform: uppercase;
   padding: 10px;
 }
+
 .leylim__list-item img {
   width: 100%;
 }
@@ -77,7 +78,7 @@
 }
 
 .leylim-area-row__actions {
-  width: 30px;
+  width: 50px;
   position: absolute;
   left: -50px;
   top: 0;
@@ -110,13 +111,14 @@
 
 .leylim__footer {
   width: var(--container-width);
+  flex: 0 0 40px;
   margin-top: 20px;
-  display: inline-flex;
+  display: flex;
   justify-content: flex-end;
 }
 
 .leylim__footer-button {
-  padding: 10px 30px;
+  padding: 0 30px;
   margin-left: 10px;
   border: 1px solid var(--border-color);
   font-size: 15px;
@@ -139,6 +141,7 @@
 .leylim-editor__button {
   height: 50px;
   width: 100%;
+
   /* border-bottom: 1px solid var(--border-color); */
   line-height: 50px;
   text-decoration: none;
@@ -150,5 +153,4 @@
   color: #444;
 }
 
-.leylim-editor__button i{
-}
+.leylim-editor__button i {}
