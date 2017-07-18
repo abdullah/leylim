@@ -69,8 +69,8 @@ window.onload = () => {
       before(options){
         console.log(options);
       },
-      after(){
-        console.log(1);
+      after(options){
+        console.log(options);
       }
     },
   });
