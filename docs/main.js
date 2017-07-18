@@ -77,17 +77,19 @@ window.onload = () => {
     rowUpdated() {
       console.log("rowUpdated")
     },
-    beforeRowDelete() {
-      console.log("beforeRowDelete")
+    beforeRowDelete(row, cb) {
+      // Do this
+      cb(row)
+      console.log("beforeRowDelete", row)
     },
     rowDeleted() {
       console.log("rowDeleted")
     },
-    beforeRowDuplicate(row, cb){
+    beforeRowDuplicate(row, cb) {
       cb(row);
       console.log("beforeRowDuplicate");
     },
-    rowDuplicated(){
+    rowDuplicated() {
       console.log("rowDuplicated");
     },
   });
