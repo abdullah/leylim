@@ -2,30 +2,7 @@
 let leylim;
 
 window.onload = () => {
-
-  let components = [
-    {
-      name: 'blabla', // tmp name
-      thumbnail: 'http://www.truebeck.com/wp-content/uploads/2016/12/work-item-placeholder-Copy-150x150.png',
-      template: `
-        <div class="blabla" contenteditable>
-          Lorem ipsum dolor sit <b>amet</b>, consectetur adipisicing elit. At reiciendis et aliquid dolores eligendi repellendus, voluptate ut odio omnis,
-          <img src="http://tetrailetisim.com/resim/olcekle/37775/600/574" /> aliquam deserunt reprehenderit eum exercitationem neque nemo veritatis eveniet molestiae!</div>
-        `,
-      style: `
-        .blabla img {
-          display: block;
-        }
-      `
-    },
-    {
-      name: 'fooo', // tmp name
-      thumbnail: 'http://www.truebeck.com/wp-content/uploads/2016/12/work-item-placeholder-Copy-150x150.png',
-      template: `<div class="fooo" contenteditable><i>Lorem</i> ipsum dolor sit amet.</div>`,
-      style: `.fooo { color: red }`
-    }
-  ];
-
+  // Dummy row data
   const rowList = [
     {
       name: 'wiki-info', // tmp name
@@ -37,11 +14,10 @@ window.onload = () => {
     }
   ]
 
-
   const onSave = () => {
     const res = leylim.getRowData()
     for (var ii = 0; ii < res.length; ii++) {
-      console.log(`${ii} ROW -> \n ${res[ii]}`);
+      console.log(`${ii} ROW -> ${res[ii]}`);
     }
   }
 
@@ -63,8 +39,11 @@ window.onload = () => {
 
   leylim = new Leylim({
     el: '#app',
-    components,
-    rowList,
+    components: [
+      oneImage,
+      twoImage
+    ],
+    // rowList,
     customEditorButtons: [
       {
         command: 'test',
@@ -85,8 +64,15 @@ window.onload = () => {
         class: "update-class-example",
         handler: onUpdate
       }
-    ]
+    ],
+    onCreate: {
+      before(options){
+        console.log(options);
+      },
+      after(){
+        console.log(1);
+      }
+    },
   });
-
-
 }
+
