@@ -4,6 +4,10 @@
   --border-color: #ddd;
 }
 
+.leylim * {
+  box-sizing: border-box;
+}
+
 .leylim {
   width: 100vw;
   height: 100vh;
@@ -35,6 +39,10 @@
   align-items: center;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 10px;
+}
+.leylim__list-item img {
+  width: 100%;
 }
 
 .leylim__area {
