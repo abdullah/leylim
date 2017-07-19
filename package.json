@@ -6,7 +6,7 @@
   "module": "dist/leylim.mjs",
   "jsnext:main": "dist/leylim.mjs",
   "scripts": {
-    "prebuild": "eslint lib test",
+    "prebuild": "eslint lib",
     "build": "rollup -c --environment BUILD:production",
     "watch": "rollup -c -w",
     "pretest": "rollup -c",
