@@ -1,0 +1,156 @@
+:root {
+  --container-width: 1200px;
+  --component-list-width: 150px;
+  --border-color: #ddd;
+}
+
+.leylim * {
+  box-sizing: border-box;
+}
+
+.leylim {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.leylim__component-list {
+  width: var(--component-list-width);
+  height: 100%;
+  background: white;
+  border-left: 1px solid var(--border-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  overflow: scroll;
+}
+
+.leylim__list-item {
+  width: 100%;
+  height: var(--component-list-width);
+  display: block;
+  border-bottom: 1px solid var(--border-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.leylim__list-item img {
+  width: 100%;
+}
+
+.leylim__area {
+  width: 100%;
+  margin-top: 30px;
+  max-width: var(--container-width);
+}
+
+.leylim__empty-area {
+  text-align: center;
+  font-size: 100px;
+  color: var(--border-color);
+}
+
+.leylim-area-row {
+  position: relative;
+  margin-bottom: 20px;
+
+  /* outline: 1px solid red; */
+}
+
+.leylim-area-row:hover .leylim-actions {
+  display: block;
+}
+
+.leylim-area-row__template {}
+
+.leylim-html-mode {
+  font-family: Courier New, Courier, monospace;
+  background: #f2f2f2;
+  padding: 5px;
+}
+
+.leylim-area-row__actions {
+  width: 50px;
+  position: absolute;
+  left: -50px;
+  top: 0;
+  padding-right: 20px;
+  z-index: 2;
+}
+
+.leylim-actions {
+  background: rgba(0, 0, 0, 0.4);
+  width: 30px;
+  height: 30px;
+  display: block;
+  color: floralwhite;
+  border: 1px  solid #fff;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  display: none;
+}
+
+.action-active {
+  background: black;
+}
+
+.actions--delete {}
+
+.actions--duplicate {}
+
+.actions--edit {}
+
+.leylim__footer {
+  width: var(--container-width);
+  flex: 0 0 40px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.leylim__footer-button {
+  padding: 0 30px;
+  margin-left: 10px;
+  border: 1px solid var(--border-color);
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.leylim-editor {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: var(--component-list-width);
+  border-left: 1px solid var(--border-color);
+  overflow: scroll;
+  background: white;
+}
+
+.leylim-editor__button {
+  height: 50px;
+  width: 100%;
+
+  /* border-bottom: 1px solid var(--border-color); */
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+}
+
+.leylim-editor__button i {}

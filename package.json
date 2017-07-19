@@ -7,7 +7,7 @@
   "jsnext:main": "dist/leylim.mjs",
   "scripts": {
     "prebuild": "eslint lib",
-    "build": "rollup -c --environment BUILD:production",
+    "build": "rollup -c --environment BUILD:production && babel-node component.bundle.js",
     "watch": "rollup -c -w",
     "pretest": "rollup -c",
     "test": "mocha",
@@ -46,6 +46,7 @@
     "rollup-plugin-serve": "^0.4.0",
     "rollup-plugin-string": "^2.0.2",
     "rollup-plugin-uglify": "^2.0.1",
+    "rollup-pluginutils": "^2.0.1",
     "rollup-watch": "^4.0.0"
   }
 }
