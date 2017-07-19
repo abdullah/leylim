@@ -46,15 +46,23 @@ window.onload = () => {
     el: '#app',
     components,
     rowList,
-    customEditorButtons: [
-      {
-        command: 'test',
-        icon: 'fa fa-cog',
-        handler(selection) {
-          console.log(selection);
+    customEditorButtons: {
+      merge: true,
+      filter(buttons){
+        return buttons;
+        // Should return array
+      },
+      buttons:
+      [
+        {
+          command: 'test',
+          icon: 'fa fa-cog',
+          handler(selection) {
+            console.log(selection);
+          }
         }
-      }
-    ],
+      ]
+    },
     buttons: [
       {
         text: "Save",
