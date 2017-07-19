@@ -2,6 +2,11 @@
 let leylim;
 
 window.onload = () => {
+  let components = [
+    oneImage,
+    twoImage
+  ];
+
   // Dummy row data
   const rowList = [
     {
@@ -39,10 +44,7 @@ window.onload = () => {
 
   leylim = new Leylim({
     el: '#app',
-    components: [
-      oneImage,
-      twoImage
-    ],
+    components,
     rowList,
     customEditorButtons: [
       {
@@ -71,19 +73,24 @@ window.onload = () => {
     created() {
       console.log("created")
     },
-    beforeRowUpdate() {
-      console.log("beforeRowUpdate")
+    beforeRowUpdate(node, row, cb) {
+      console.log("beforeRowUpdate", node, row)
+      row.extraFields = {
+        // imgSource: node.querySelector('img').src,
+        // title: node.querySelector('h1').innerText,
+      };
+      cb(node, row);
     },
-    rowUpdated() {
-      console.log("rowUpdated")
+    rowUpdated(row, index) {
+      console.log("rowUpdated", row, index)
     },
     beforeRowDelete(row, cb) {
       // Do this
       cb(row)
       console.log("beforeRowDelete", row)
     },
-    rowDeleted() {
-      console.log("rowDeleted")
+    rowDeleted(row) {
+      console.log("rowDeleted", row)
     },
     beforeRowDuplicate(row, cb) {
       cb(row);
@@ -92,6 +99,13 @@ window.onload = () => {
     rowDuplicated() {
       console.log("rowDuplicated");
     },
+    beforeRowAdd(row, cb) {
+      console.log("beforeRowAdd", row);
+      cb(row);
+    },
+    rowAdded() {
+      console.log('rowAdded');
+    }
   });
 }
 
