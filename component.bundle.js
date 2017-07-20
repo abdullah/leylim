@@ -38,6 +38,7 @@ const generateComponent = (entry) => {
   }).catch(console.error); // log errors
 }
 
+generateComponent('l-components.js');
 
 // copy css files
 fs.createReadStream(assetFile).pipe(fs.createWriteStream(assetFileOut));
