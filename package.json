@@ -13,7 +13,7 @@
     "test": "mocha",
     "prepublish": "npm test"
   },
-  "repository": "rollup/leylim",
+  "repository": "abdullah/leylim",
   "keywords": [
     "leylim"
   ],
