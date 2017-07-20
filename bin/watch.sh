@@ -1,0 +1,2 @@
+rollup -c -w
+gulp

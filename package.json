@@ -6,12 +6,9 @@
   "module": "dist/leylim.mjs",
   "jsnext:main": "dist/leylim.mjs",
   "scripts": {
-    "prebuild": "eslint lib",
-    "build": "rollup -c --environment BUILD:production && babel-node component.bundle.js",
-    "watch": "rollup -c -w",
-    "pretest": "rollup -c",
-    "test": "mocha",
-    "prepublish": "npm test"
+    "build": "bin/build.sh",
+    "watch": "bin/watch.sh",
+    "serve": "bin/serve.sh"
   },
   "repository": "abdullah/leylim",
   "keywords": [
@@ -36,6 +33,7 @@
     "babel-register": "^6.18.0",
     "babelrc-rollup": "^3.0.0",
     "eslint": "^4.1.1",
+    "gulp": "^3.9.1",
     "istanbul": "^0.4.5",
     "livereload": "^0.6.2",
     "mocha": "^3.2.0",
