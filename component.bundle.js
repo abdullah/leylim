@@ -8,21 +8,13 @@ import { makeLegalIdentifier } from 'rollup-pluginutils';
 
 const folder = 'lib/components';
 const outFolder = 'dist/components';
-const assetFile = 'lib/assets/leylim.css';
-const assetFileOut = 'dist/leylim.css';
-
-// Get all component
-fs.readdir(folder, (err, files) => {
-  for (var ii = 0; ii < files.length; ii++) {
-    generateComponent(files[ii]);
-  }
-});
 
 // Bundle it
 const plugins = [
   babel(babelrc()),
   uglify()
-]
+];
+
 const generateComponent = (entry) => {
   rollup({
     entry: path.join(folder, entry),
@@ -40,5 +32,9 @@ const generateComponent = (entry) => {
 
 generateComponent('l-components.js');
 
-// copy css files
-fs.createReadStream(assetFile).pipe(fs.createWriteStream(assetFileOut));
+// Get all component
+fs.readdir(folder, (err, files) => {
+  for (var ii = 0; ii < files.length; ii++) {
+    generateComponent(files[ii]);
+  }
+});

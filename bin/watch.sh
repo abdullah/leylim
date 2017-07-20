@@ -1,2 +1,2 @@
+rm -rf dist
 rollup -c -w
-gulp

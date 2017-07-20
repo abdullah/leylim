@@ -1,9 +1,9 @@
-import babel from 'rollup-plugin-babel';
-import babelrc from 'babelrc-rollup';
-import istanbul from 'rollup-plugin-istanbul';
-import serve from 'rollup-plugin-serve';
-import livereload from 'rollup-plugin-livereload';
-import uglify from 'rollup-plugin-uglify';
+var babel = require('rollup-plugin-babel');
+var babelrc = require('babelrc-rollup').default;
+var istanbul = require('rollup-plugin-istanbul');
+var serve = require('rollup-plugin-serve');
+var livereload = require('rollup-plugin-livereload');
+var uglify = require('rollup-plugin-uglify');
 
 let pkg = require('./package.json');
 let external = Object.keys(pkg.dependencies);
@@ -21,7 +21,7 @@ if (process.env.BUILD !== 'production') {
       port: 1992
     }),
     livereload({
-      watch: ['dist', 'example', 'assets','lib']
+      watch: ['dist', 'example', 'assets', 'lib']
     }),
     istanbul({
       exclude: ['test/**/*', 'node_modules/**/*']
@@ -34,7 +34,7 @@ if (process.env.BUILD !== 'production') {
 }
 
 
-export default {
+module.exports = {
   entry: 'lib/index.js',
   plugins: plugins,
   external: external,

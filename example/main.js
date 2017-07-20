@@ -41,6 +41,7 @@ window.onload = () => {
 
   leylim = new Leylim({
     el: '#app',
+    thumbnailPath: '../dist/assets/component-images/',
     components,
     rowList,
     customEditorButtons: {

@@ -1,4 +1,6 @@
+rm -rf dist
 eslint lib
+gulp image
+gulp css
+gulp bundle-component
 rollup -c --environment BUILD:production
-babel-node component.bundle.js
-gulp
