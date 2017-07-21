@@ -33,6 +33,7 @@ cp -r node_modules/leylim/dist/assets/component-images ./myThumbnailPaths
 #### Use
 
 ```javascript
+const components = lComponents;
 new Leylim({
   el: '#app', // Which parent node?
   thumbnailPath: 'myThumbnailPaths/', // Say where thumbnail path to leylim.
