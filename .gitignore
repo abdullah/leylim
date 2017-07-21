@@ -1,8 +1,23 @@
+.babelrc
+.eslintrc
+.git
+.gitignore
+.npmignore
+.travis.yml
+bin
+component.bundle.js
+docs
+example
+gulpfile.js
+lib
+LICENSE
 node_modules
-coverage
-_dist
-# Book build output
-_book
+package.json
+postcss.config.js
+README.md
+rollup.config.js
+SUMMARY.md
+test
 
 # eBook build output
 *.epub
