@@ -1,3 +1,3 @@
 # Introduction
 
-[Demo](http://github.com/abdullah/leylim)
+[DOC](https://abdullah.github.io/leylim/)
