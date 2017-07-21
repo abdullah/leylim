@@ -2,3 +2,4 @@ _book
 .sass-cache
 Gemfile.lock
 *.gem
+node_modules
