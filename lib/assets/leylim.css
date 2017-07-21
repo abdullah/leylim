@@ -66,7 +66,7 @@
 }
 
 .leylim-area-row:hover .leylim-actions {
-  display: block;
+  visibility: visible;
 }
 
 .leylim-area-row__template {}
@@ -88,15 +88,21 @@
 
 .leylim-actions {
   background: rgba(0, 0, 0, 0.4);
-  width: 30px;
-  height: 30px;
-  display: block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: floralwhite;
   border: 1px  solid #fff;
   text-align: center;
-  line-height: 30px;
   text-decoration: none;
-  display: none;
+  visibility: hidden;
+}
+
+.leylim-actions i {
+  line-height: inherit;
+  z-index: 0
 }
 
 .action-active {

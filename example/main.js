@@ -19,7 +19,7 @@ window.onload = () => {
   const onSave = () => {
     const res = leylim.getRowData()
     for (var ii = 0; ii < res.length; ii++) {
-      console.log(`${ii} ROW -> ${res[ii]}`);
+      // console.log(`${ii} ROW -> ${res[ii]}`);
     }
   }
 
@@ -56,7 +56,7 @@ window.onload = () => {
           command: 'test',
           icon: 'fa fa-cog',
           handler(selection) {
-            console.log(selection);
+            // console.log(selection);
           }
         }
       ]
@@ -74,13 +74,13 @@ window.onload = () => {
       }
     ],
     beforeCreate() {
-      console.log("beforeCreate")
+      // console.log("beforeCreate")
     },
     created() {
-      console.log("created")
+      // console.log("created")
     },
     beforeRowUpdate(node, row, cb) {
-      console.log("beforeRowUpdate", node, row)
+      // console.log("beforeRowUpdate", node, row)
       row.extraFields = {
         // imgSource: node.querySelector('img').src,
         // title: node.querySelector('h1').innerText,
@@ -88,29 +88,29 @@ window.onload = () => {
       cb(node, row);
     },
     rowUpdated(row, index) {
-      console.log("rowUpdated", row, index)
+      // console.log("rowUpdated", row, index)
     },
     beforeRowDelete(row, cb) {
       // Do this
       cb(row)
-      console.log("beforeRowDelete", row)
+      // console.log("beforeRowDelete", row)
     },
     rowDeleted(row) {
-      console.log("rowDeleted", row)
+      // console.log("rowDeleted", row)
     },
     beforeRowDuplicate(row, cb) {
       cb(row);
-      console.log("beforeRowDuplicate");
+      // console.log("beforeRowDuplicate");
     },
     rowDuplicated() {
-      console.log("rowDuplicated");
+      // console.log("rowDuplicated");
     },
     beforeRowAdd(row, cb) {
-      console.log("beforeRowAdd", row);
+      // console.log("beforeRowAdd", row);
       cb(row);
     },
     rowAdded() {
-      console.log('rowAdded');
+      // console.log('rowAdded');
     }
   });
 }
