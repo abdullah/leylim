@@ -10,9 +10,7 @@ docs
 example
 gulpfile.js
 lib
-LICENSE
 node_modules
-package.json
 postcss.config.js
 README.md
 rollup.config.js
