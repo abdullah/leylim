@@ -43,7 +43,5 @@ new Leylim({
 
  # That's All!
 
-  Check more [example](https://abdullah.github.io/leylim/example/) and [options](/options.html)
-
 
 
