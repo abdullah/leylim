@@ -24,6 +24,10 @@ else
   # remove '_book' directory
   git clean -fx _book
 
+  # remove
+  rm -rf docs/_book/example
+  rm -rf docs/_book/dist
+
   #add all files
   git add .
 
