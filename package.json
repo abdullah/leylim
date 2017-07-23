@@ -1,6 +1,6 @@
 {
   "name": "leylim",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Leylim",
   "main": "dist/leylim.js",
   "module": "dist/leylim.mjs",
