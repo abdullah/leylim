@@ -17,9 +17,11 @@ window.onload = () => {
   ]
 
   const onSave = () => {
-    const res = leylim.getRowData()
+    const res = leylim.getRowData();
+    console.log(res);
+
     for (var ii = 0; ii < res.length; ii++) {
-      // console.log(`${ii} ROW -> ${res[ii]}`);
+      console.log(`${ii} ROW -> ${res[ii]}`);
     }
   }
 
@@ -56,7 +58,7 @@ window.onload = () => {
           command: 'test',
           icon: 'fa fa-cog',
           handler(selection) {
-            // console.log(selection);
+            console.log(selection);
           }
         }
       ]
@@ -73,45 +75,50 @@ window.onload = () => {
         handler: onUpdate
       }
     ],
-    beforeCreate() {
-      // console.log("beforeCreate")
+    beforeCreate(o) {
+      console.log('beforeCreate(o)');
+      return o;
     },
-    created() {
-      // console.log("created")
+    created(o) {
+      console.log('created(o)');
+      return o;
     },
-    beforeRowUpdate(node, row, cb) {
-      // console.log("beforeRowUpdate", node, row)
-      row.extraFields = {
-        // imgSource: node.querySelector('img').src,
-        // title: node.querySelector('h1').innerText,
-      };
-      cb(node, row);
+    beforeRowUpdate(o) {
+      console.log('beforeRowUpdate(o)');
+      // o.component.extraFields = {
+      //   imgSource: `o.node.querySelector('img').src`,
+      //   title: `o.node.querySelector('h1').innerText`,
+      // };
+      return o;
     },
-    rowUpdated(row, index) {
-      // console.log("rowUpdated", row, index)
+    rowUpdated(o) {
+      console.log('rowUpdated(o)');
+      return o;
     },
-    beforeRowDelete(row, cb) {
-      // Do this
-      cb(row)
-      // console.log("beforeRowDelete", row)
+    beforeRowDelete(o) {
+      console.log('beforeRowDelete(o)');
+      return o;
     },
-    rowDeleted(row) {
-      // console.log("rowDeleted", row)
+    rowDeleted(o) {
+      console.log('rowDeleted(o)');
+      return o;
     },
-    beforeRowDuplicate(row, cb) {
-      cb(row);
-      // console.log("beforeRowDuplicate");
+    beforeRowDuplicate(o) {
+      console.log('beforeRowDuplicate(o)');
+      return o;
     },
-    rowDuplicated() {
-      // console.log("rowDuplicated");
+    rowDuplicated(o) {
+      console.log('rowDuplicated(o)');
+      return o;
     },
-    beforeRowAdd(row, cb) {
-      // console.log("beforeRowAdd", row);
-      cb(row);
+    beforeRowAdd(o) {
+      console.log('beforeRowAdd(o)');
+      return o;
     },
-    rowAdded() {
-      // console.log('rowAdded');
-    }
+    rowAdded(o) {
+      console.log('rowAdded(o)');
+      return o;
+    },
   });
 }
 
