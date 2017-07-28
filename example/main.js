@@ -14,6 +14,10 @@ window.onload = () => {
     }
   }
 
+  Leylim.use(editImage, {
+    test: 1
+  });
+
   leylim = new Leylim({
     el: '#app',
     thumbnailPath: '../dist/assets/component-images/',
