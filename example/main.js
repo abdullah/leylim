@@ -18,6 +18,10 @@ window.onload = () => {
     test: 1
   });
 
+  Leylim.use(modal, {
+    sizet: 'large'
+  });
+
   leylim = new Leylim({
     el: '#app',
     thumbnailPath: '../dist/assets/component-images/',
