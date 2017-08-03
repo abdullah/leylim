@@ -1,8 +1,6 @@
-# UNDER DEVELOPMENT 
-
 ### What's the Leylim?
 
-Leylim is a agile and scaleble content builder which simpler and provide content for mobile divice and only **`~13KB`**.
+Leylim is a agile and scaleble content builder which simpler and provide content for mobile divice and only **`~12KB`**.
 <br>
 <br>
 Also [Leylim](https://www.youtube.com/watch?v=-NRZme8v4H0) is a sing by Zülfü Livaneli 🎶
@@ -45,4 +43,5 @@ new Leylim({
 
  # That's All!
 
- [example](https://abdullah.github.io/leylim/), [options](https://abdullah.github.io/leylim/) more [documentation](https://abdullah.github.io/leylim/)
+
+
