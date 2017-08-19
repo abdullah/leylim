@@ -1,0 +1,11 @@
+.edit-image {
+  position: fixed;
+  background-color: #111;
+  border: 0;
+  color: #fff;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  visibility: hidden;
+}

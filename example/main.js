@@ -31,13 +31,14 @@ window.onload = () => {
     }
   }
 
+  Leylim.use(modal, {
+    sizet: 'large'
+  });
+
   Leylim.use(editImage, {
     test: 1
   });
 
-  Leylim.use(modal, {
-    sizet: 'large'
-  });
 
   leylim = new Leylim({
     el: '#app',
