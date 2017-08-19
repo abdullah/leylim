@@ -1,20 +1,34 @@
-#Life Cycle
+##Life Cycle Events
 
 ###Use
 
-Each end of lifecyle hook you must return given object from hooks
+At end of lifecycle hook you must return given object from hooks.
 
-####Hooks List
+####Event List
 
 ```javascript
-  beforeCreate(o) {},
-  created(o) {},
-  beforeRowUpdate(o) {},
-  rowUpdated(o) {},
-  beforeRowDelete(o) {},
-  rowDeleted(o) {},
-  beforeRowDuplicate(o) {},
-  rowDuplicated(o) {},
-  beforeRowAdd(o) {},
-  rowAdded(o) {},
+  beforeCreate() {},
+  created() {},
+  beforeRowUpdate(component) {},
+  rowUpdated(component) {},
+  beforeRowDelete(component) {},
+  rowDeleted(component) {},
+  beforeRowDuplicate(component) {},
+  rowDuplicated(component) {},
+  beforeRowAdd(component) {},
+  rowAdded(component) {},
+```
+
+
+### Example
+
+```javascript
+  new Leylim({
+    //...
+    beforeRowUpdate(component) {
+      // Do this
+      return component;
+    },
+  });
+}
 ```
