@@ -28,6 +28,5 @@ gulp.task('watch', ['image', 'css', 'bundle-component'], () => {
   gulp.watch('./lib/assets/leylim.css', ['css']);
   gulp.watch('./lib/assets/component-thumbnail/*', ['image']);
   gulp.watch('./lib/components/*', ['bundle-component']);
-  gulp.watch('./lib/plugins/*', ['bundle-component']);
 });
 

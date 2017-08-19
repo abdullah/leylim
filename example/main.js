@@ -30,15 +30,6 @@ window.onload = () => {
       console.log(`${ii} ROW -> ${res[ii]}`);
     }
   }
-
-  Leylim.use(editImage, {
-    test: 1
-  });
-
-  Leylim.use(modal, {
-    sizet: 'large'
-  });
-
   leylim = new Leylim({
     el: '#app',
     thumbnailPath: '../dist/assets/component-images/',
@@ -51,6 +42,9 @@ window.onload = () => {
         handler: onSave
       }
     ],
+    beforeCreate(o) {
+      console.log(o);
+    },
   });
 }
 

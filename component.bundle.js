@@ -9,13 +9,9 @@ import { makeLegalIdentifier } from 'rollup-pluginutils';
 const paths = {
   component: {
     src: 'lib/components',
-    dist: 'dist/components',
-  },
-  plugin: {
-    src: 'lib/plugins',
-    dist: 'dist/plugins',
-  },
-}
+    dist: 'dist/components'
+  }
+};
 // Bundle it
 const plugins = [
   babel(babelrc()),
@@ -46,10 +42,3 @@ fs.readdir(paths.component.src, (err, files) => {
 });
 
 bundle('l-components.js', paths.component.src, paths.component.dist);
-
-// Get all plugin
-fs.readdir(paths.plugin.src, (err, files) => {
-  for (var ii = 0; ii < files.length; ii++) {
-    bundle(files[ii], paths.plugin.src, paths.plugin.dist);
-  }
-});
