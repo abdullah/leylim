@@ -1,7 +1,8 @@
-#Buttons
 
-Leylim provides custom buttons like save or cancel etc.
-You can add button to leylim like below example;
+
+### Example
+In this example we see how to get row data from leylim;
+Each leylim instance have getRowData function for generate row data itself.
 
 ```javascript
 let leylim;

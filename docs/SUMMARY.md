@@ -4,10 +4,8 @@
 * [Component](component.md)
 * [Custom Component](custom-component.md)
 * [Life Cycle](life-cycle.md)
-* [Buttons](buttons.md)
-* [Editor](editor.md)
-* [Advanced](advanced.md)
-* [Options](options.md)
+* [Editor Buttons](editor-buttons.md)
+* [All options](all-options.md)
 * [Example](example.md)
-* [API](api.md)
+* [Get Row Data](get-row-data.md)
 
