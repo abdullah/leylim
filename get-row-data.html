@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Example · GitBook</title>
+        <title>Get Row Data · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="get-row-data.html" />
     
-    
-    <link rel="prev" href="all-options.html" />
+    <link rel="prev" href="example.html" />
     
 
     </head>
@@ -167,7 +165,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7" data-path="example.html">
+        <li class="chapter " data-level="1.7" data-path="example.html">
             
                 <a href="example.html">
             
@@ -180,7 +178,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="get-row-data.html">
+        <li class="chapter active" data-level="1.8" data-path="get-row-data.html">
             
                 <a href="get-row-data.html">
             
@@ -223,7 +221,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Example</a>
+        <a href="." >Get Row Data</a>
     </h1>
 </div>
 
@@ -238,7 +236,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h3 id="example">Example</h3>
+<p>In this example we see how to get row data from leylim;
+Each leylim instance have getRowData function for generate row data itself.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> leylim;
+
+<span class="hljs-keyword">const</span> onSave = () =&gt; {
+  <span class="hljs-keyword">const</span> res = leylim.getRowData();
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> ii = <span class="hljs-number">0</span>; ii &lt; res.length; ii++) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${ii}</span> ROW -&gt; <span class="hljs-subst">${res[ii]}</span>`</span>);
+  }
+};
+
+leylim = <span class="hljs-keyword">new</span> Leylim({
+  <span class="hljs-comment">//......</span>
+  buttons: [
+    {
+      text: <span class="hljs-string">&apos;Save&apos;</span>,
+      btnClass: <span class="hljs-string">&apos;save-class&apos;</span>,
+      handler: onSave
+    }
+  ]
+  <span class="hljs-comment">//......</span>
+});
+</code></pre>
+
                                 
                                 </section>
                             
@@ -265,14 +287,10 @@
 
             
                 
-                <a href="all-options.html" class="navigation navigation-prev " aria-label="Previous page: All options">
+                <a href="example.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Example">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="get-row-data.html" class="navigation navigation-next " aria-label="Next page: Get Row Data">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -281,7 +299,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Example","level":"1.7","depth":1,"next":{"title":"Get Row Data","level":"1.8","depth":1,"path":"get-row-data.md","ref":"get-row-data.md","articles":[]},"previous":{"title":"All options","level":"1.6","depth":1,"path":"all-options.md","ref":"all-options.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"example.md","mtime":"2017-08-21T09:02:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-21T12:30:33.452Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Get Row Data","level":"1.8","depth":1,"previous":{"title":"Example","level":"1.7","depth":1,"path":"example.md","ref":"example.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"get-row-data.md","mtime":"2017-08-21T12:28:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-21T12:30:33.452Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
