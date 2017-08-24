@@ -20,7 +20,7 @@ if (process.env.BUILD !== 'production') {
       port: 1992
     }),
     livereload({
-      watch: ['dist', 'example']
+      watch: ['dist/**/*.js']
     }),
     istanbul({
       exclude: ['test/**/*', 'node_modules/**/*']
