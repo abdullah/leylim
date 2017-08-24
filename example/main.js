@@ -52,6 +52,10 @@ window.onload = () => {
         handler: onSave
       }
     ],
+    beforeRowUpdate(o){
+      console.log(o.node);
+      return o
+    }
   });
 }
 
