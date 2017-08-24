@@ -1,0 +1,38 @@
+.leylim-modal {
+  display: flex;
+  visibility: hidden;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, .4);
+  z-index: 33333;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.leylim-modal__body {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+.leylim-modal__header,
+.leylim-modal__content {
+  padding: 20px;
+}
+
+.leylim-modal__header {
+  border-bottom: 1px solid #ddd;
+  color: #444;
+}

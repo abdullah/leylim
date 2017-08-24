@@ -1,0 +1,25 @@
+.edit-image {
+  position: fixed;
+  background-color: #111;
+  border: 0;
+  color: #fff;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.edit-image-src {
+  width: 100%;
+  padding: 10px;
+}
+
+.edit-image-button{
+  padding: 10px;
+  width: 100%;
+  border: 0;
+  margin-top: 10px;
+  color: #fff;
+  background-color: black;
+}

@@ -12,7 +12,7 @@ gulp.task('image', function () {
 });
 
 gulp.task('css', function () {
-  return gulp.src('./lib/assets/leylim.css')
+  return gulp.src('./lib/**/*.css')
     .pipe(postcss())
     .pipe(gulp.dest('./dist'));
 });
@@ -25,7 +25,7 @@ gulp.task('bundle-component', function () {
 });
 
 gulp.task('watch', ['image', 'css', 'bundle-component'], () => {
-  gulp.watch('./lib/assets/leylim.css', ['css']);
+  gulp.watch('./lib/**/*.css', ['css']);
   gulp.watch('./lib/assets/component-thumbnail/*', ['image']);
   gulp.watch('./lib/components/*', ['bundle-component']);
 });

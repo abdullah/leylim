@@ -5,12 +5,11 @@ var serve = require('rollup-plugin-serve');
 var livereload = require('rollup-plugin-livereload');
 var uglify = require('rollup-plugin-uglify');
 
+
 let pkg = require('./package.json');
 let external = Object.keys(pkg.dependencies);
 
-let plugins = [
-  babel(babelrc()),
-];
+let plugins = [babel(babelrc())];
 
 if (process.env.BUILD !== 'production') {
   plugins.push(
@@ -21,18 +20,15 @@ if (process.env.BUILD !== 'production') {
       port: 1992
     }),
     livereload({
-      watch: ['dist','example']
+      watch: ['dist/**/*.js']
     }),
     istanbul({
       exclude: ['test/**/*', 'node_modules/**/*']
     })
   );
 } else {
-  plugins.push(
-    uglify()
-  )
+  plugins.push(uglify());
 }
-
 
 module.exports = {
   entry: 'lib/index.js',
