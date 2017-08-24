@@ -25,9 +25,9 @@ At end of lifecycle hook you must return given object from hooks.
 ```javascript
   new Leylim({
     //...
-    beforeRowUpdate(component) {
+    beforeRowUpdate({ component, node }) {
       // Do this
-      return component;
+      return { component, node };
     },
   });
 }
