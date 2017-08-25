@@ -6,9 +6,9 @@
   "module": "dist/leylim.mjs",
   "jsnext:main": "dist/leylim.mjs",
   "scripts": {
-    "build": "bin/build.sh",
-    "watch": "bin/watch.sh",
-    "serve": "bin/serve.sh"
+    "build": "NODE_ENV=production gulp",
+    "dev": "NODE_ENV=development gulp",
+    "serve": "scripts/serve.sh"
   },
   "repository": "abdullah/leylim",
   "keywords": [
@@ -32,16 +32,18 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.18.0",
     "babelrc-rollup": "^3.0.0",
+    "browser-sync": "^2.18.13",
     "cssnano": "^3.10.0",
     "eslint": "^4.1.1",
     "gulp": "^3.9.1",
     "gulp-image": "^2.10.0",
     "gulp-postcss": "^7.0.0",
+    "gulp-rollup": "^2.14.0",
     "istanbul": "^0.4.5",
     "livereload": "^0.6.2",
     "mocha": "^3.2.0",
     "postcss-cssnext": "^3.0.2",
-    "rollup": "^0.43.0",
+    "rollup": "^0.48.2",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-istanbul": "^1.1.0",
     "rollup-plugin-livereload": "^0.4.0",

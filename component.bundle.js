@@ -5,7 +5,6 @@ import uglify from 'rollup-plugin-uglify';
 import fs from 'fs';
 import path from 'path';
 import { makeLegalIdentifier } from 'rollup-pluginutils';
-import css from 'rollup-plugin-css-porter';
 
 const paths = {
   component: {
@@ -22,15 +21,15 @@ const plugins = [babel(babelrc()), uglify()];
 
 const bundle = (entry, src, dist) => {
   rollup({
-    entry: path.join(src, entry),
+    input: path.join(src, entry),
     plugins: plugins
   })
     .then(function(bundle) {
       bundle.write({
         format: 'umd',
-        moduleName: makeLegalIdentifier(entry.split('.')[0]),
+        name: makeLegalIdentifier(entry.split('.')[0]),
         indent: false,
-        dest: path.join(dist, entry)
+        file: path.join(dist, entry)
       });
       /* eslint-disable */
     })
