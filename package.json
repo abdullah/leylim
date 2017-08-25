@@ -7,7 +7,7 @@
   "jsnext:main": "dist/leylim.mjs",
   "scripts": {
     "build": "NODE_ENV=production gulp",
-    "dev": "NODE_ENV=development gulp",
+    "dev": "rm -rf dist && NODE_ENV=development gulp",
     "serve": "scripts/serve.sh"
   },
   "repository": "abdullah/leylim",
