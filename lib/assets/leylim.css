@@ -31,7 +31,7 @@
 
 .leylim__list-item {
   width: 100%;
-  height: var(--component-list-width);
+  height: calc(var(--component-list-width) - 50px);
   display: block;
   border-bottom: 1px solid var(--border-color);
   display: inline-flex;
