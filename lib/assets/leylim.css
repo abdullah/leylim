@@ -58,18 +58,32 @@
   color: var(--border-color);
 }
 
+@keyframes row-animation {
+  0% {
+    opacity: 0;
+    left: -100px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
 .leylim-area-row {
   position: relative;
   margin-bottom: 20px;
+}
 
-  /* outline: 1px solid red; */
+.added {
+  animation: row-animation .5s;
 }
 
 .leylim-area-row:hover .leylim-actions {
   visibility: visible;
 }
 
-.leylim-area-row__template {}
+.leylim-area-row__template {
+}
 
 .leylim-html-mode {
   font-family: Courier New, Courier, monospace;
@@ -94,7 +108,7 @@
   align-items: center;
   justify-content: center;
   color: floralwhite;
-  border: 1px  solid #fff;
+  border: 1px solid #fff;
   text-align: center;
   text-decoration: none;
   visibility: hidden;
@@ -102,18 +116,21 @@
 
 .leylim-actions i {
   line-height: inherit;
-  z-index: 0
+  z-index: 0;
 }
 
 .action-active {
   background: black;
 }
 
-.actions--delete {}
+.actions--delete {
+}
 
-.actions--duplicate {}
+.actions--duplicate {
+}
 
-.actions--edit {}
+.actions--edit {
+}
 
 .leylim__footer {
   width: var(--container-width);
@@ -159,4 +176,5 @@
   color: #444;
 }
 
-.leylim-editor__button i {}
+.leylim-editor__button i {
+}
