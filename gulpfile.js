@@ -44,9 +44,9 @@ gulp.task(
   ['build', 'image', 'css', 'bundle-component', 'browser-sync'],
   done => {
     gulp.watch('./lib/**/*.css', ['css']);
-    gulp.watch('./lib/**/*.js', ['build']);
+    gulp.watch('./lib/*.js', ['build']);
     gulp.watch('./lib/assets/component-thumbnail/*', ['image']);
-    gulp.watch('./lib/components/*', ['bundle-component']);
+    gulp.watch(['./lib/components/*.js', './lib/plugins/*.js'], ['bundle-component']);
     browserSync.reload();
     done();
   }
