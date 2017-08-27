@@ -7,6 +7,7 @@ Leylim is a agile and scaleble content builder which simpler and provide content
 <br>
 Also [Leylim](https://www.youtube.com/watch?v=-NRZme8v4H0) is a sing by Zülfü Livaneli 🎶
 
+See [Demo](https://abdullah.github.io/leylim/example/)
 ### Motivation
 
 Some cases you may need more than wysiwyg editor, we suppose you need a pure data of dirty html so any platform not support html tags
