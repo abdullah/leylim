@@ -53,6 +53,7 @@ window.onload = () => {
       var file = image[0];
       var reader = new FileReader();
       reader.onloadend = function() {
+        console.log(reader.result);
         cb(reader.result)
       }
       reader.readAsDataURL(file);
