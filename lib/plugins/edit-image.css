@@ -12,7 +12,9 @@
 
 .edit-image-input-form {
   width: 100%;
-  padding: 10px;
+  height: 32px;
+  margin: 10px 0;
+  /* padding: 10px; */
 }
 
 .edit-image-button {
@@ -31,4 +33,90 @@
   font-size: 14px;
   margin: 4px 0;
   color: #444;
+}
+
+.edit-image-input-form[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 6.65px 0;
+}
+.edit-image-input-form[type=range]:focus {
+  outline: none;
+}
+.edit-image-input-form[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1.7px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #000000;
+  border-radius: 0px;
+  border: 0px solid rgba(0, 1, 1, 0);
+}
+.edit-image-input-form[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 1.7px #ff00ff, 0px 0px 0px #ff1aff;
+  border: 0px solid #000000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #e4ffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6.65px;
+}
+.edit-image-input-form[type=range]:focus::-webkit-slider-runnable-track {
+  background: #000000;
+}
+.edit-image-input-form[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1.7px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #000000;
+  border-radius: 0px;
+  border: 0px solid rgba(0, 1, 1, 0);
+}
+.edit-image-input-form[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 1.7px #ff00ff, 0px 0px 0px #ff1aff;
+  border: 0px solid #000000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #e4ffff;
+  cursor: pointer;
+}
+.edit-image-input-form[type=range]::-ms-track {
+  width: 100%;
+  height: 1.7px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.edit-image-input-form[type=range]::-ms-fill-lower {
+  background: #000000;
+  border: 0px solid rgba(0, 1, 1, 0);
+  border-radius: 0px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.edit-image-input-form[type=range]::-ms-fill-upper {
+  background: #000000;
+  border: 0px solid rgba(0, 1, 1, 0);
+  border-radius: 0px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.edit-image-input-form[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 1.7px #ff00ff, 0px 0px 0px #ff1aff;
+  border: 0px solid #000000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #e4ffff;
+  cursor: pointer;
+  height: 1.7px;
+}
+.edit-image-input-form[type=range]:focus::-ms-fill-lower {
+  background: #000000;
+}
+.edit-image-input-form[type=range]:focus::-ms-fill-upper {
+  background: #000000;
 }
