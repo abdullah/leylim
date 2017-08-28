@@ -6,6 +6,7 @@
 * [Life Cycle](life-cycle.md)
 * [Editor Buttons](editor-buttons.md)
 * [All options](all-options.md)
-* [Example](example.md)
+* [Plugins](plugins.md)
+* [Example](https://abdullah.github.io/leylim/example/index.html)
 * [Get Row Data](get-row-data.md)
 
