@@ -121,4 +121,14 @@ new Leylim({
 
 ### Change Font
 
-**Not YET**
+**Use**
+
+```javascript
+import ChangeFont from 'leylim/dist/plugins/change-font.js';
+
+Leylim.use(changeFont);
+
+new Leylim({
+  // Options
+});
+```
