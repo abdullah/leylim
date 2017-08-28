@@ -179,3 +179,9 @@
 
 .leylim-editor__button i {
 }
+
+.leylim input,
+select {
+  width: 100%;
+  height: 32px;
+}
