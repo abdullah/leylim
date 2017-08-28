@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Editor Buttons · GitBook</title>
+        <title>Plugins · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="all-options.html" />
     
-    
-    <link rel="prev" href="life-cycle.html" />
+    <link rel="prev" href="all-options.html" />
     
 
     </head>
@@ -141,7 +139,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="editor-buttons.html">
+        <li class="chapter " data-level="1.5" data-path="editor-buttons.html">
             
                 <a href="editor-buttons.html">
             
@@ -167,7 +165,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="plugins.html">
+        <li class="chapter active" data-level="1.7" data-path="plugins.html">
             
                 <a href="plugins.html">
             
@@ -236,7 +234,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Editor Buttons</a>
+        <a href="." >Plugins</a>
     </h1>
 </div>
 
@@ -251,91 +249,93 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="editor">Editor</h1>
-<p>Leylim have customizable editor, you can filter buttons, add or customize that editor.</p>
-<h4 id="full-example">Full example</h4>
-<pre><code class="lang-javascript"><span class="hljs-keyword">new</span> Leylim({
-  <span class="hljs-comment">//</span>
-  customEditorButtons: {
-    merge: <span class="hljs-literal">true</span>,
-    filter(buttons) {
-      <span class="hljs-keyword">return</span> buttons;
-      <span class="hljs-comment">// Should return Array&lt;Button&gt;</span>
-    },
-    buttons:
-    [
-      {
-        command: <span class="hljs-string">&apos;bold&apos;</span>,
-        icon: <span class="hljs-string">&apos;fa fa-bold&apos;</span>,
-      },
-      {
-        command: <span class="hljs-string">&apos;my-command&apos;</span>,
-        icon: <span class="hljs-string">&apos;fa fa-my-command&apos;</span>,
-        handler(selection) {
-          <span class="hljs-comment">// My command handler</span>
-        }
-      }
-    ]
+                                <h1 id="plugins">Plugins</h1>
+<h4 id="writing-a-plugin">Writing a plugin</h4>
+<p><strong>Use</strong></p>
+<p>You take many arguments by Leylim after register your plugin</p>
+<p><strong>Leylim.nodes</strong> Leylim HTML nodes, check node <a href="https://github.com/abdullah/leylim/blob/master/lib/constant.js" target="_blank">list</a></p>
+<p><strong>Leylim.editorButtons</strong> Right of the screen, you can put button or costumize that buttons, <a href="https://github.com/abdullah/leylim/blob/master/lib/editorButtons.js" target="_blank">Button List</a></p>
+<p><strong>Leylim.forceUpdate</strong> Some cases you need call forceUpdate. This methods says to Leylim update all components.</p>
+<h4 id="example">Example</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> plugin = {
+  install(Leylim, options) {
+    <span class="hljs-comment">// options #= { changeSomeThing: true }</span>
+    Leylim.proptotype.$yourPluginMethod;
   }
-  <span class="hljs-comment">//</span>
-});
+};
+
+<span class="hljs-keyword">const</span> options = {
+  changeSomeThing: <span class="hljs-literal">true</span>
+};
+
+Leylim.use(plugin, options);
 </code></pre>
-<h3 id="without-handler-helper">Without Handler helper</h3>
-<p>Adding a editor button without handler</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">new</span> Leylim({
-  <span class="hljs-comment">//....</span>
-  customEditorButtons: {
-    buttons: [
-      {
-        command: <span class="hljs-string">&apos;bold&apos;</span>,
-        icon: <span class="hljs-string">&apos;fa fa-bold&apos;</span>,
-      }
-    ]
-  },
-  <span class="hljs-comment">//....</span>
-});
-</code></pre>
-<p>This buttons shown list right of screen, when user click this button, selected text will be wrapping <code>&lt;b&gt;</code> tag. See <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand" target="_blank">Command List</a></p>
-<h3 id="with-handler-helper">With Handler helper</h3>
-<p>Some cases, you want to handle click event independent leylim core. In this case you can use <code>handler</code> helper;</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">new</span> Leylim({
-  <span class="hljs-comment">//....</span>
-  customEditorButtons: {
-    buttons: [
-      {
-        command: <span class="hljs-string">&apos;bold&apos;</span>,
-        icon: <span class="hljs-string">&apos;fa fa-bold&apos;</span>,
-        handler(selection) {
-          <span class="hljs-comment">// Do this</span>
-        }
-      }
-    ]
+<hr>
+<p><strong>Plugin list</strong></p>
+<ul>
+<li><a href="#modal">Modal</a></li>
+<li><a href="#edit-image">Edit Image</a></li>
+</ul>
+<h3 id="modal">Modal</h3>
+<p>Modal plugins helps you for while writing a plugin</p>
+<p><strong>Use</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> Modal <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;leylim/dist/plugins/modal.js&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;leylim/dist/plugins/modal.css&apos;</span>;
+
+Leylim.use(Modal);
+
+<span class="hljs-keyword">const</span> AwesomePlugin = {
+  install(Leylim) {
+    <span class="hljs-keyword">const</span> modal = Leylim.$getModal({
+      title: <span class="hljs-string">&apos;Awesome Plugin Title&apos;</span>,
+    });
+    modal.setContent(<span class="hljs-string">`&lt;div&gt;Awesome Content&lt;/div&gt;`</span>)
+    modal.open();
   }
-  <span class="hljs-comment">//....</span>
+};
+
+Leylim.use(AwesomePlugin);
+
+<span class="hljs-keyword">new</span> Leylim({
+  <span class="hljs-comment">// Options</span>
 });
 </code></pre>
-<h3 id="filter">Filter</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">new</span> Leylim({
-  <span class="hljs-comment">//....</span>
-  customEditorButtons: [
-    filter(buttons) {
-      <span class="hljs-comment">// Filter then return</span>
-      <span class="hljs-keyword">return</span> buttons;
+<p><strong>API</strong></p>
+<p><code>setContent</code>
+<code>open</code>
+<code>close</code>
+<code>onClose</code></p>
+<p>See <a href="https://github.com/abdullah/leylim/blob/master/lib/plugins/modal.js" target="_blank">modal plugin</a>;</p>
+<h3 id="edit-image">Edit Image</h3>
+<p><strong>Use</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> EditImage <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;leylim/dist/plugins/modal.js&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;leylim/dist/plugins/modal.css&apos;</span>;
+
+Leylim.use(EditImage);
+
+<span class="hljs-keyword">new</span> Leylim({
+  <span class="hljs-comment">// Options</span>
+});
+</code></pre>
+<p><strong>With upload options</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> EditImage <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;leylim/dist/plugins/edit-image.js&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;leylim/dist/plugins/edit-image.css&apos;</span>;
+
+Leylim.use(EditImage,
+  {
+    onUploadFile: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">image, cb</span>) </span>{
+      <span class="hljs-keyword">var</span> file = image[<span class="hljs-number">0</span>];
+      <span class="hljs-keyword">var</span> reader = <span class="hljs-keyword">new</span> FileReader();
+      reader.onloadend = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        cb(reader.result)
+      }
+      reader.readAsDataURL(file);
     }
-  ]
-  <span class="hljs-comment">//....</span>
-});
-</code></pre>
-<h3 id="merge">Merge</h3>
-<pre><code class="lang-javascript"><span class="hljs-keyword">new</span> Leylim({
-  <span class="hljs-comment">//....</span>
-  customEditorButtons: [
-    merge: <span class="hljs-literal">false</span>,
-    buttons: [
-      <span class="hljs-comment">// Your buttons</span>
-    ]
-  ]
-  <span class="hljs-comment">//....</span>
+  }
+);
+
+<span class="hljs-keyword">new</span> Leylim({
+  <span class="hljs-comment">// Options</span>
 });
 </code></pre>
 
@@ -365,14 +365,10 @@
 
             
                 
-                <a href="life-cycle.html" class="navigation navigation-prev " aria-label="Previous page: Life Cycle">
+                <a href="all-options.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: All options">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="all-options.html" class="navigation navigation-next " aria-label="Next page: All options">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -381,7 +377,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Editor Buttons","level":"1.5","depth":1,"next":{"title":"All options","level":"1.6","depth":1,"path":"all-options.md","ref":"all-options.md","articles":[]},"previous":{"title":"Life Cycle","level":"1.4","depth":1,"path":"life-cycle.md","ref":"life-cycle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"editor-buttons.md","mtime":"2017-08-25T15:35:04.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-28T12:45:47.360Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Plugins","level":"1.7","depth":1,"next":{"title":"Example","level":"1.8","depth":1,"url":"https://abdullah.github.io/leylim/example/index.html","ref":"https://abdullah.github.io/leylim/example/index.html","articles":[]},"previous":{"title":"All options","level":"1.6","depth":1,"path":"all-options.md","ref":"all-options.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"plugins.md","mtime":"2017-08-28T12:45:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-28T12:45:47.360Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

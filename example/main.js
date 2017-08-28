@@ -48,7 +48,17 @@ window.onload = () => {
   };
 
   Leylim.use(modal);
-  Leylim.use(editImage);
+  Leylim.use(editImage, {
+    onUploadFile: function(image, cb) {
+      var file = image[0];
+      var reader = new FileReader();
+      reader.onloadend = function() {
+        console.log(reader.result);
+        cb(reader.result)
+      }
+      reader.readAsDataURL(file);
+    }
+  });
 
   leylim = new Leylim({
     el: '#app',
