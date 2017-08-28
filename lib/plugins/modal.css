@@ -38,10 +38,14 @@
   color: #444;
 }
 
+.leylim-modal__footer {
+  border-top: 1px solid #ddd;
+}
+
 .leylim-modal__footer button {
   padding: 0 10px;
   margin-right: 10px;
-  border:0;
+  border: 0;
   font-size: 15px;
   cursor: pointer;
   background: white;
