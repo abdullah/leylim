@@ -49,6 +49,8 @@ window.onload = () => {
 
   Leylim.use(modal);
   Leylim.use(changeFont);
+  Leylim.use(changeColor);
+
   Leylim.use(editImage, {
     onUploadFile: function(image, cb) {
       var file = image[0];
