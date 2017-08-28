@@ -28,6 +28,7 @@
 }
 
 .leylim-modal__header,
+.leylim-modal__footer,
 .leylim-modal__content {
   padding: 20px;
 }
@@ -35,4 +36,13 @@
 .leylim-modal__header {
   border-bottom: 1px solid #ddd;
   color: #444;
+}
+
+.leylim-modal__footer button {
+  padding: 0 10px;
+  margin-right: 10px;
+  border:0;
+  font-size: 15px;
+  cursor: pointer;
+  background: white;
 }
