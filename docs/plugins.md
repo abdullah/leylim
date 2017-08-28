@@ -35,6 +35,7 @@ Leylim.use(plugin, options);
 
 - [Modal](#modal)
 - [Edit Image](#edit-image)
+- [Change Font](#change-font)
 
 ### Modal
 Modal plugins helps you for while writing a plugin
@@ -72,7 +73,7 @@ new Leylim({
 `open`
 `close`
 `onClose`
-
+`onSave`
 
 See [modal plugin](https://github.com/abdullah/leylim/blob/master/lib/plugins/modal.js);
 
@@ -117,3 +118,7 @@ new Leylim({
   // Options
 });
 ```
+
+### Change Font
+
+**Not YET**
