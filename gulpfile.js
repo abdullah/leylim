@@ -32,6 +32,7 @@ gulp.task('build', async function() {
 
 gulp.task('browser-sync', function() {
   browserSync.init({
+    port: 5000,
     server: {
       baseDir: './'
     },
@@ -46,7 +47,10 @@ gulp.task(
     gulp.watch('./lib/**/*.css', ['css']);
     gulp.watch('./lib/*.js', ['build']);
     gulp.watch('./lib/assets/component-thumbnail/*', ['image']);
-    gulp.watch(['./lib/components/*.js', './lib/plugins/*.js'], ['bundle-component']);
+    gulp.watch(
+      ['./lib/components/*.js', './lib/plugins/*.js'],
+      ['bundle-component']
+    );
     browserSync.reload();
     done();
   }
