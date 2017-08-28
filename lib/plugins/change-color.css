@@ -1,0 +1,12 @@
+#leylim-color-content {
+  /* display: flex; */
+}
+
+#leylim-color-content span {
+  width: 20px;
+  height: 20px;
+  /* outline: 1px solid #C74141; */
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 1px
+}
