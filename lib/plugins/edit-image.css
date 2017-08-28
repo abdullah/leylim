@@ -17,6 +17,28 @@
   /* padding: 10px; */
 }
 
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  padding: 10px;
+  text-align: center;
+  display: block;
+  color: #444;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
 .edit-image-button {
   padding: 10px;
   width: 100%;
@@ -26,7 +48,6 @@
   background-color: black;
   border-top: 1px solid #ddd;
 }
-
 
 .edit-image-title {
   display: block;
