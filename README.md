@@ -2,8 +2,7 @@
 
 ### What's the Leylim?
 
-[![Coverage Status](https://coveralls.io/repos/abdullah/leylim/badge.svg?branch=master)](https://coveralls.io/r/abdullah/leylim?branch=master)
-
+[![Coverage Status](https://coveralls.io/repos/github/abdullah/leylim/badge.svg?branch=master)](https://coveralls.io/github/abdullah/leylim?branch=master)
 
 Leylim is a agile and scaleble content builder which simpler and provide content for mobile divice and only **`~12KB`**.
 <br>
