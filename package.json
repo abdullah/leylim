@@ -9,7 +9,8 @@
     "build": "NODE_ENV=production gulp",
     "dev": "rm -rf dist && NODE_ENV=development gulp",
     "serve": "scripts/serve.sh",
-    "test": "nyc --reporter=html --reporter=text mocha"
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": "abdullah/leylim",
   "keywords": [
@@ -40,6 +41,7 @@
     "babel-register": "^6.18.0",
     "babelrc-rollup": "^3.0.0",
     "browser-sync": "^2.18.13",
+    "coveralls": "^2.13.1",
     "cssnano": "^3.10.0",
     "eslint": "^4.1.1",
     "expect.js": "^0.3.1",
