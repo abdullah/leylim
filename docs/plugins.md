@@ -36,6 +36,7 @@ Leylim.use(plugin, options);
 - [Modal](#modal)
 - [Edit Image](#edit-image)
 - [Change Font](#change-font)
+- [Link](#link)
 
 ### Modal
 Modal plugins helps you for while writing a plugin
@@ -127,6 +128,21 @@ new Leylim({
 import ChangeFont from 'leylim/dist/plugins/change-font.js';
 
 Leylim.use(changeFont);
+
+new Leylim({
+  // Options
+});
+```
+
+
+### Link
+
+**Use**
+
+```javascript
+import Link from 'leylim/dist/plugins/link.js';
+
+Leylim.use(Link);
 
 new Leylim({
   // Options
