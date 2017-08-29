@@ -50,6 +50,7 @@ window.onload = () => {
   Leylim.use(modal);
   Leylim.use(changeFont);
   Leylim.use(changeColor);
+  Leylim.use(link);
 
   Leylim.use(editImage, {
     onUploadFile: function(image, cb) {
@@ -76,7 +77,7 @@ window.onload = () => {
       }
     ],
     beforeRowUpdate(o) {
-      console.log(o.node);
+      // console.log(o.node);
       return o;
     }
   });
