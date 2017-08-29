@@ -10,6 +10,7 @@ const doc = new JSDOM(`
   </head>
   <body>
     <div id="app"></div>
+    <div class="leylim"></div>
   </body>
   </html>
 `);
