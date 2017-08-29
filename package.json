@@ -8,7 +8,8 @@
   "scripts": {
     "build": "NODE_ENV=production gulp",
     "dev": "rm -rf dist && NODE_ENV=development gulp",
-    "serve": "scripts/serve.sh"
+    "serve": "scripts/serve.sh",
+    "test": "nyc --reporter=html --reporter=text mocha"
   },
   "repository": "abdullah/leylim",
   "keywords": [
@@ -40,6 +41,7 @@
     "gulp-postcss": "^7.0.0",
     "gulp-rollup": "^2.14.0",
     "istanbul": "^0.4.5",
+    "jsdom": "^11.2.0",
     "livereload": "^0.6.2",
     "mocha": "^3.2.0",
     "postcss-cssnext": "^3.0.2",
