@@ -187,3 +187,7 @@ select.leylim-modal-input {
   width: 100%;
   height: 32px;
 }
+
+input.leylim-modal-input{
+  padding-left: 10px;
+}
