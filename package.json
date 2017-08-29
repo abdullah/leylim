@@ -54,6 +54,7 @@
     "jsdom": "^11.2.0",
     "livereload": "^0.6.2",
     "mocha": "^3.2.0",
+    "nyc": "^11.1.0",
     "postcss-cssnext": "^3.0.2",
     "rollup": "^0.48.2",
     "rollup-plugin-babel": "^2.7.1",
