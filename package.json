@@ -10,6 +10,7 @@
     "dev": "rm -rf dist && NODE_ENV=development gulp",
     "serve": "scripts/serve.sh",
     "test": "nyc --reporter=html --reporter=text mocha",
+    "test:watch": "nyc --reporter=html --reporter=text mocha --watch",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": "abdullah/leylim",

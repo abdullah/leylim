@@ -1,1 +1,1 @@
---recursive --compilers js:babel-register --require test/helper/dom.js -w
+--recursive --compilers js:babel-register --require test/helper/dom.js
