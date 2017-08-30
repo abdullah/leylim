@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/editor.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">lib</a> editor.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75.76% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>25/33</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.42% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>24/31</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { LEYLIM_ROOT } from './constant';
+// import editorButtons from './editorButtons';
+import Leylim from './index';
+&nbsp;
+export default class Editor {
+  constructor(options) {
+    this.options = options;
+    this.editorNode = null;
+&nbsp;
+    const editorButtons = Leylim.editorButtons;
+    const _editorButtons = options.filter
+      ? <span class="branch-0 cbranch-no" title="branch not covered" >options.filter(editorButtons)</span>
+      : editorButtons;
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (options.merge) {
+      this.buttons = _editorButtons.concat(options.buttons);
+    } else <span class="cstat-no" title="statement not covered" >if (options.buttons) {</span>
+<span class="cstat-no" title="statement not covered" >      this.buttons = options.buttons;</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      this.buttons = _editorButtons;</span>
+    }
+&nbsp;
+    this.init();
+    // this.catchSelection();
+  }
+&nbsp;
+  /**
+   * @todo when selection contains any button add active class to selected button
+   * @memberof Editor
+   */
+  // catchSelection() {
+  //   document.onselectionchange = (e) =&gt; {
+  //     const selection = window.getSelection();
+  //     // console.log(selection);
+  //   }
+  // }
+&nbsp;
+  init() {
+    const buttons = this.buttons;
+    const rootNode = document.querySelector(`.${LEYLIM_ROOT}`);
+    const editorNode = document.createElement('div');
+    this.editorNode = editorNode;
+    editorNode.classList.add('leylim-editor');
+&nbsp;
+    for (let ii = 0; ii &lt; buttons.length; ii++) {
+      const buttonNode = document.createElement('A');
+      buttonNode.href = '#';
+      buttonNode.classList.add('leylim-editor__button');
+      buttonNode.innerHTML = `&lt;i class="${buttons[ii].icon}"&gt;&lt;/i&gt;${buttons[ii]
+        .innerText || ''}`;
+      buttonNode.onclick = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >e =&gt; this.onClick(e, buttons[ii]);</span></span>
+&nbsp;
+      editorNode.appendChild(buttonNode);
+    }
+    rootNode.appendChild(editorNode);
+  }
+&nbsp;
+  /**
+   * @todo provide selection object for commandObject handler (customEditorButtons)
+   *
+   * @memberof Editor
+   */
+  onClick = <span class="fstat-no" title="function not covered" >(</span>e, commandObject) =&gt; {
+<span class="cstat-no" title="statement not covered" >    e.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >    if (commandObject.handler) {</span>
+<span class="cstat-no" title="statement not covered" >      commandObject.handler(window.getSelection(), Leylim);</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      document.execCommand(</span>
+        commandObject.command,
+        true,
+        commandObject.value || 2
+      );
+    }
+  };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Aug 29 2017 19:23:10 GMT+0300 (+03)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
