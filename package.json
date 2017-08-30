@@ -1,6 +1,6 @@
 {
   "name": "leylim",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Leylim",
   "main": "dist/leylim.js",
   "module": "dist/leylim.mjs",
@@ -28,6 +28,7 @@
   "nyc": {
     "exclude": [
       "lib/editorButtons.js",
+      "lib/utils.js",
       "test"
     ]
   },
