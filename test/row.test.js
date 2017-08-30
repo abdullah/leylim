@@ -6,9 +6,7 @@ import { rowList } from './mocks/index';
 
 describe('LEYLIM ROW', () => {
   it('should init Row', () => {
-    expect(function() {
-      new Row(rowList[0]);
-    }).to.be.ok();
+    expect(new Row(rowList[0])).to.be.ok()
   });
 
   it('should render row with component', () => {

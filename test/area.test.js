@@ -68,4 +68,35 @@ describe('LEYLIM AREA', () => {
     const newSize = area.rowList.length;
     expect(tmpsize < newSize).to.be.equal(true);
   });
+
+  it('should work handleEvents [ADD_COMPONENT]', () => {
+    const area = new Area({
+      rootNode: `.${LEYLIM_ROOT}`,
+      rowList: rowList
+    });
+    area.handleEvents('ADD_COMPONENT', rowList[0]);
+    expect(area.rowList.length == 2).to.be.equal(true);
+  });
+
+  it('should work handleEvents [DUPLICATE_ROW]', () => {
+    const area = new Area({
+      rootNode: `.${LEYLIM_ROOT}`,
+      rowList: rowList
+    });
+    area.handleEvents('DUPLICATE_ROW', area.rowList[0]._uuid);
+
+    expect(
+      area.rowList[0].component.template == area.rowList[1].component.template
+    ).to.be.equal(true);
+  });
+
+  it('should work handleEvents [DELETE_ROW]', () => {
+    const area = new Area({
+      rootNode: `.${LEYLIM_ROOT}`,
+      rowList: rowList
+    });
+    area.handleEvents('DELETE_ROW', area.rowList[0]._uuid);
+
+    expect(area.rowList.length == 0).to.be.equal(true);
+  });
 });

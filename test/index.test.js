@@ -1,5 +1,6 @@
 /* eslint-disable */
 import Leylim from '../lib/index.js';
+import Area from '../lib/area';
 import assert from 'assert';
 import expect from 'expect.js';
 import { rowList } from './mocks/index';
@@ -8,7 +9,7 @@ describe('[LEYLIM INDEX]', () => {
   const leylim = new Leylim({
     el: '#app',
     rowList,
-    components: [{}],
+    components: [{}]
   });
 
   it('should perfect render Leylim Instance', () => {
@@ -48,4 +49,18 @@ describe('[LEYLIM INDEX]', () => {
     assert.equal(leylim.getRowData().length >= 1, true);
   });
 
+  it('should corrent work saveSelection', () => {
+    // assert.equal(.getRowData().length >= 1, true);
+    Leylim._plugins = [];
+    const leylimInitInstance = new Leylim({
+      el: '#app',
+      rowList,
+      components: [{}],
+      thumbnailPath:''
+    });
+    leylimInitInstance.init();
+
+
+    expect(leylimInitInstance._area instanceof Area).to.be.equal(true);
+  });
 });

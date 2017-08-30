@@ -18,8 +18,6 @@ describe('LEYLIM BUS', () => {
   });
 
   it('should work Bus fire', () => {
-    expect(function() {
-      Bus.fire('ANY_EVENT', null, {});
-    }).to.be.ok();
+    expect(Bus.fire).withArgs('ANY_EVENT', null, {}).to.not.throwException();
   });
 });
