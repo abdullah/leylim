@@ -3,7 +3,7 @@ _book
 Gemfile.lock
 *.gem
 node_modules
-
+.vscode
 # Logs
 logs
 *.log
