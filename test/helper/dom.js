@@ -21,6 +21,8 @@ global.window = doc.window;
 window.scrollX = 10;
 window.scrollY = 10;
 window.scroll = function() {};
+window.getSelection = function() {};
+document.execCommand = function() {};
 
 Object.keys(window).forEach(key => {
   if (!(key in global)) {
