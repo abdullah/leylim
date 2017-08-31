@@ -1,5 +1,6 @@
 /* eslint-disable */
 import Editor from '../lib/editor';
+import expect from 'expect.js';
 var assert = require('assert');
 
 describe('LEYLIM EDITOR', () => {
@@ -41,5 +42,34 @@ describe('LEYLIM EDITOR', () => {
     });
 
     assert.equal(editort.buttons.length, 1);
+  });
+
+  it('should working with clicked buttons', () => {
+    let tmpHandler = false;
+    const editort = new Editor({});
+    const button = editort.editorNode.querySelector('a');
+    button.click();
+    expect(button.click).to.be.ok();
+  });
+
+  it('should working with clicked buttons with handler', () => {
+    let tmpHandler = false;
+    const editort = new Editor({
+      merge: true,
+      buttons: [
+        {
+          command: 'test-command',
+          icon: 'test',
+          handler() {
+            tmpHandler = true;
+          }
+        }
+      ]
+    });
+    const buttons = editort.editorNode.querySelectorAll('a');
+    const testButton = buttons[buttons.length - 1];
+    testButton.click();
+    expect(testButton.click).to.be.ok();
+    expect(tmpHandler).to.be.equal(true);
   });
 });
