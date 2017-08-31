@@ -6,7 +6,7 @@ import { rowList } from './mocks/index';
 
 describe('LEYLIM ROW', () => {
   it('should init Row', () => {
-    expect(new Row(rowList[0])).to.be.ok()
+    expect(new Row(rowList[0])).to.be.ok();
   });
 
   it('should render row with component', () => {
@@ -24,7 +24,9 @@ describe('LEYLIM ROW', () => {
   it('should work actions [HTML]', () => {
     const row = new Row(rowList[0]);
     row.render();
-    const button = row.rowNode.querySelector(`.${row.actionButtons.ACTIONS_HTML}`);
+    const button = row.rowNode.querySelector(
+      `.${row.actionButtons.ACTIONS_HTML}`
+    );
     button.click();
     expect(row.rawHTMLmode).to.be.equal(true);
   });
@@ -36,4 +38,8 @@ describe('LEYLIM ROW', () => {
     expect(row.rawHTMLmode).to.be.equal(false);
   });
 
+  it('should work drop handler ondragleave', () => {
+    const row = new Row(rowList[0]);
+    expect(row.attachEvents).to.be.ok();
+  });
 });
