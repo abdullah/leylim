@@ -74,8 +74,26 @@
   margin-bottom: 20px;
 }
 
+.row-node-drag-up:after {
+  top: -5px;
+}
+
+.row-node-drag-down:after {
+  bottom: -35px;
+}
+
+.row-node-drag-up:after,
+.row-node-drag-down:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  left: 0;
+  border-top: 5px dashed #ddd;
+}
+
 .added {
-  animation: row-animation .5s;
+  animation: row-animation 0.5s;
 }
 
 .leylim-area-row:hover .leylim-actions {
@@ -180,14 +198,12 @@
 .leylim-editor__button i {
 }
 
-
-.leylim
-input.leylim-modal-input,
+.leylim input.leylim-modal-input,
 select.leylim-modal-input {
   width: 100%;
   height: 32px;
 }
 
-input.leylim-modal-input{
+input.leylim-modal-input {
   padding-left: 10px;
 }
