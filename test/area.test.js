@@ -70,25 +70,6 @@ describe('LEYLIM AREA', () => {
     expect(tmpsize < newSize).to.be.equal(true);
   });
 
-  it('should work addComponent method with drop', () => {
-    const area = new Area({
-      rootNode: `.${LEYLIM_ROOT}`,
-      rowList: rowList
-    });
-
-    Leylim._components = rowList;
-    const tmpsize = area.rowList.length;
-    area.addComponent(
-      {
-        componentId: 0,
-        rowId: 0,
-        before: false
-      },
-      true
-    );
-    expect(tmpsize < area.rowList.length).to.be.equal(true);
-  });
-
   it('should work handleEvents [ADD_COMPONENT]', () => {
     const area = new Area({
       rootNode: `.${LEYLIM_ROOT}`,
@@ -118,16 +99,5 @@ describe('LEYLIM AREA', () => {
     area.handleEvents('DELETE_ROW', area.rowList[0]._uuid);
 
     expect(area.rowList.length == 0).to.be.equal(true);
-  });
-
-  it('should work handleEvents [ADD_COMPONENT_WITH_DRAG_DROP]', () => {
-    const area = new Area({
-      rootNode: `.${LEYLIM_ROOT}`,
-      rowList: rowList
-    });
-    Leylim._components = rowList;
-    const tmpsize = area.rowList.length;
-    area.handleEvents('ADD_COMPONENT_WITH_DRAG_DROP', area.rowList[0]._uuid);
-    expect(tmpsize < area.rowList.length).to.be.equal(true);
   });
 });

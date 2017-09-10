@@ -38,8 +38,4 @@ describe('LEYLIM ROW', () => {
     expect(row.rawHTMLmode).to.be.equal(false);
   });
 
-  it('should work drop handler ondragleave', () => {
-    const row = new Row(rowList[0]);
-    expect(row.attachEvents).to.be.ok();
-  });
 });
